@@ -573,48 +573,71 @@ img {vertical-align: middle;}
 
 }
 
-/*artist*/
-
+/* Grid layout: 3 columns, responsive */
 .artist_gallery .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr); /* Show 3 items per row */
+  gap: 2rem;
   padding: 2rem 0;
+  justify-items: center; /* Center boxes horizontally */
 }
 
+/* Style for each artist card */
 .artist_gallery .box {
   background: #222;
   border-radius: 0.5rem;
   text-align: center;
   padding: 2rem;
   border: 0.5rem solid #333;
+  width: 100%;
+  max-width: 300px; /* Prevent overly wide cards */
 }
 
+/* Ensure all images are the same size */
 .artist_gallery .box img {
   width: 100%;
-  height: auto;
+  height: 250px; /* Force same height for all images */
+  object-fit: cover; /* Crop to fit container neatly */
   border-radius: 0.5rem;
 }
 
-.artist_gallery .box .title {
+/* Artist name/title styling */
+.artist_gallery .title {
   font-size: 2rem;
   color: #fff;
   margin-top: 1rem;
 }
 
-.artist_gallery .box .icons {
+/* Container for action icons */
+.artist_gallery .icons {
   margin-top: 1rem;
 }
 
-.artist_gallery .box .icons a {
+/* Icon style */
+.artist_gallery .icons a {
   font-size: 2rem;
   margin: 0 1rem;
   color: #fff;
   transition: color 0.3s;
 }
 
-.artist_gallery .box .icons a:hover {
+/* Icon hover effect */
+.artist_gallery .icons a:hover {
   color: var(--main-color);
+}
+
+/* Responsive: 2 columns on medium screens */
+@media (max-width: 900px) {
+  .artist_gallery .box-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: 1 column on small screens */
+@media (max-width: 600px) {
+  .artist_gallery .box-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 
