@@ -573,6 +573,52 @@ img {vertical-align: middle;}
 
 }
 
+/*artist*/
+
+.artist_gallery .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.artist_gallery .box {
+  background: #222;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+  border: 0.5rem solid #333;
+}
+
+.artist_gallery .box img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.artist_gallery .box .title {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.artist_gallery .box .icons {
+  margin-top: 1rem;
+}
+
+.artist_gallery .box .icons a {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.artist_gallery .box .icons a:hover {
+  color: var(--main-color);
+}
+
+
+
 @media (max-width:768px){
 
     #menu-bars{
